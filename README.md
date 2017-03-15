@@ -28,6 +28,19 @@ magento.login(function(err, sessId) {
 });
 ```
 
+If need HTTPS connection
+
+```js
+var magento = new MagentoAPI({
+  host: 'your.host',
+  port: 443,
+  path: '/api/xmlrpc/',
+  login: 'your_username',
+  pass: 'your_pass',
+  secure: true
+});
+```
+
 If need be, you can manually change the session id.
 
 ```js

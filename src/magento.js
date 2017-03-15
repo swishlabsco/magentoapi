@@ -48,7 +48,8 @@ var configDefaults = {
   path: mandatory,
   login: mandatory,
   pass: mandatory,
-  parallelLimit: Infinity
+  parallelLimit: Infinity,
+  secure: false
 };
 
 /**
@@ -77,7 +78,12 @@ function Magento(config) {
   }
 
   this.config = magentoConfig;
-  this.client = xmlrpc.createClient(this.config);
+  //If user set secure as true connect to server with https
+  if (!this.config.secure) {
+      this.client = xmlrpc.createClient(this.config);
+  } else {
+      this.client = xmlrpc.createSecureClient(this.config);
+  }
   this.queue = [];
   this.queue.running = 0;
   this.queue.parallelLimit = this.config.parallelLimit;
