@@ -7,17 +7,21 @@
   "contributors": [
     {
       "name": "Tim Marshall",
-      "email": "timothyjmarshall@gmail.com",
-      "name": "Josué Us",
-      "email": "josue@kemik.gt",
+      "email": "timothyjmarshall@gmail.com"
+    },
+    {
       "name": "Kémik",
       "email": "info@kemik.gt"
+    },
+    {
+      "name": "Josué Us",
+      "email": "josue@kemik.gt"
     }
   ],
   "engines": {
     "node": ">=0.10.20"
   },
-  "dependencies" : {
+  "dependencies": {
     "request": "2.34.0",
     "xmlrpc": "1.2.0"
   },
