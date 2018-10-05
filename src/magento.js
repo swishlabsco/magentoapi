@@ -72,10 +72,9 @@ function Magento(config) {
   for (key in configDefaults) {
     if (configDefaults[key] === mandatory && !config[key]) {
       throw new MagentoError('Mandatory config attribute, ' + key + ', not set');
-    } else {
-      magentoConfig[key] = config[key] !== undefined ? config[key] : configDefaults[key];
     }
   }
+  Object.assign(magentoConfig, configDefaults, config); // config overwrites defaults
 
   this.config = magentoConfig;
   //If user set secure as true connect to server with https
