@@ -8,7 +8,7 @@ We forked the original repository (which is actually a fork itself) in order to 
 
 ## Installation
 
-`npm install https://github.com/swishlabsco/magentoapi/tarball/master`
+`npm install git+https://github.com/swishlabsco/magentoapi.git`
 
 ## Usage
 
