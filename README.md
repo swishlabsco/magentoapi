@@ -4,7 +4,7 @@ This wrapper lets you talk to Magento via SOAP.
 
 ## Why this fork?
 
-We forked the original repository (which is actually a fork itself) in order to allow specifying authentication headers when creating a connection. 
+We forked the original repository (which is actually a fork itself) in order to allow specifying HTTP authentication parameters when creating a connection. 
 
 ## Installation
 
