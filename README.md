@@ -2,14 +2,18 @@
 
 This wrapper lets you talk to Magento via SOAP.
 
+## Why this fork?
+
+We forked the original repository (which is actually a fork itself) in order to allow specifying authentication headers when creating a connection. 
+
 ## Installation
 
-`npm install magento-nodejs`
+`npm install https://github.com/swishlabsco/magentoapi/tarball/master`
 
 ## Usage
 
 ```js
-var MagentoAPI = require('magento');
+var MagentoAPI = require('magento-nodejs');
 var magento = new MagentoAPI({
   host: 'your.host',
   port: 80,
@@ -28,7 +32,7 @@ magento.login(function(err, sessId) {
 });
 ```
 
-If need HTTPS connection
+If an HTTPS connection is needed:
 
 ```js
 var magento = new MagentoAPI({
@@ -41,7 +45,7 @@ var magento = new MagentoAPI({
 });
 ```
 
-If need be, you can manually change the session id.
+If need be, you can manually change the session id:
 
 ```js
 magento.changeSession(newSessionId);
