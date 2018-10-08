@@ -72,6 +72,12 @@ magento.catalogCategory.info({
 
 Allows you to retrieve one level of categories by a website, a store view, or a parent category.
 
+Gotchas:
+
+* If you specify website and storeView but no parentCategory, you get an unknown error.
+* If you specify website and parentCategory but no storeView, you get a "store_not_exists" error.
+* In order to make this endpoint work, we set all three website, storeView, and parentCategory values.
+
 ```js
 magento.catalogCategory.level(callback);
 
