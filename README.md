@@ -19,7 +19,11 @@ var magento = new MagentoAPI({
   port: 80,
   path: '/api/xmlrpc/',
   login: 'your_username',
-  pass: 'your_pass'
+  pass: 'your_pass',
+  basicAuth: { // optional
+    user: 'basic_auth_username',
+    pass: 'basic_auth_password'
+  }
 });
 
 magento.login(function(err, sessId) {
@@ -41,7 +45,11 @@ var magento = new MagentoAPI({
   path: '/api/xmlrpc/',
   login: 'your_username',
   pass: 'your_pass',
-  secure: true
+  secure: true,
+  basicAuth: { // optional
+    user: 'basic_auth_username',
+    pass: 'basic_auth_password'
+  }
 });
 ```
 
