@@ -67,14 +67,15 @@ Allows you to retrieve the list of products.
 ```js
 magento.catalogProduct.list(callback);
 ```
-//or
+or
 
 ```js
-magento.catalogProduct.listOfAdditionalAttributes({
+magento.catalogProduct.list({
   filters:       val /* optional */
 }, callback);
 ```
-filter examples
+
+Filter examples:
 
 ```js
  {'type': {'in':  'simple'}}
@@ -83,7 +84,6 @@ filter examples
 ```js
  {'created_at': {'from':  '2011-07-06 01:01:01'}}
 ```
-
 
 ## [listOfAdditionalAttributes](http://www.magentocommerce.com/api/soap/catalog/catalogProduct/catalog_product.listOfAdditionalAttributes.html)
 
